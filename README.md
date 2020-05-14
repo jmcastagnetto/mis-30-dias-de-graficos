@@ -3,9 +3,9 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 
 | hecho | día | fecha | desafío |
 |-------|-----|-------|---------|
-|  [ ]  | 1 | 12 de mayo | barras / columnas
-|  [ ]  | 2 | 13 de mayo | líneas
-|  [ ]  | 3 | 14 de mayo | puntos / burbujas
+|  [:heavy_check_mark:]  | 1 | 12 de mayo | barras / columnas
+|  [:heavy_check_mark:]  | 2 | 13 de mayo | líneas
+|  [:heavy_check_mark:  ]  | 3 | 14 de mayo | puntos / burbujas
 |  [ ]  | 4 | 15 de mayo | gráficos con facetas
 |  [ ]  | 5 | 16 de mayo | diagramas de arco
 |  [ ]  | 6 | 17 de mayo | gráficos de donut :doughnut:
@@ -33,3 +33,10 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [ ]  | 28 | 8 de junio | diagramas de cuerdas
 |  [ ]  | 29 | 9 de junio | gráficos de coordenadas paralelas
 |  [ ]  | 30 | 10 de junio | diagramas de área polar o de :star:Florence Nightingale:star:
+
+**Fuentes de datos**
+
+- [Portal Nacional de Datos Abiertos (Perú)](https://www.datosabiertos.gob.pe/)
+- [Datos de COVID-19 en Perú (@jmcastagnetto)](https://github.com/jmcastagnetto/covid-19-peru-data)
+- [Learning Improvement Information Center: Regional Indicators for Learning](https://mydata.iadb.org/Education/Learning-Improvement-Information-Center-Regional-I/sqwh-9zsr)
+- [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
