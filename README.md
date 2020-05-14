@@ -5,8 +5,8 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |-------|-----|-------|---------|
 |  [:heavy_check_mark:]  | 1 | 12 de mayo | barras / columnas
 |  [:heavy_check_mark:]  | 2 | 13 de mayo | líneas
-|  [:heavy_check_mark:  ]  | 3 | 14 de mayo | puntos / burbujas
-|  [ ]  | 4 | 15 de mayo | gráficos con facetas
+|  [:heavy_check_mark:]  | 3 | 14 de mayo | puntos / burbujas
+|  [:heavy_check_mark:]  | 4 | 15 de mayo | gráficos con facetas
 |  [ ]  | 5 | 16 de mayo | diagramas de arco
 |  [ ]  | 6 | 17 de mayo | gráficos de donut :doughnut:
 |  [ ]  | 7 | 18 de mayo | gráficos ridgeline
@@ -17,7 +17,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [ ]  | 12 | 23 de mayo | gráficos de paleta (_lollipop_) :lollipop:
 |  [ ]  | 13 | 24 de mayo | visualizar datos temporales
 |  [ ]  | 14 | 25 de mayo | gráficos de rectángulos/árbol (_treemap_)
-|  [ ]  | 15 | 26 de mayo | dendorgamas
+|  [ ]  | 15 | 26 de mayo | dendogramas
 |  [ ]  | 16 | 27 de mayo | gráficos de waffle :waffle:
 |  [ ]  | 17 | 28 de mayo | diagramas de sankey
 |  [ ]  | 18 | 29 de mayo | visualizar datos espaciales :world_map:
