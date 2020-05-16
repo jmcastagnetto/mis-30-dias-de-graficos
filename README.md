@@ -7,7 +7,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 2 | 13 de mayo | líneas
 |  [:heavy_check_mark:]  | 3 | 14 de mayo | puntos / burbujas
 |  [:heavy_check_mark:]  | 4 | 15 de mayo | gráficos con facetas
-|  [ ]  | 5 | 16 de mayo | diagramas de arco
+|  [:heavy_check_mark:]  | 5 | 16 de mayo | diagramas de arco
 |  [ ]  | 6 | 17 de mayo | gráficos de donut :doughnut:
 |  [ ]  | 7 | 18 de mayo | gráficos ridgeline
 |  [ ]  | 8 | 19 de mayo | gráficos de contorno
@@ -40,3 +40,4 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 - [Datos de COVID-19 en Perú (@jmcastagnetto)](https://github.com/jmcastagnetto/covid-19-peru-data)
 - [Learning Improvement Information Center: Regional Indicators for Learning](https://mydata.iadb.org/Education/Learning-Improvement-Information-Center-Regional-I/sqwh-9zsr)
 - [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
+- [Dune (franchise) en Wikipedia](https://en.wikipedia.org/wiki/Dune_(franchise))
