@@ -5,6 +5,7 @@
 # Adaptado de https://www.r-graph-gallery.com/128-ring-or-donut-plot.html
 
 library(tidyverse)
+library(ggtext)
 library(lubridate)
 library(HistData)
 
@@ -20,22 +21,30 @@ df <- Cholera %>%
       replace_na(0),
     label_pos = ymin + (ymax - ymin) / 2,
     label = paste0(
-      region, ":",
-      "\nN = ", deaths,
-      "\n(", sprintf("%.1f%%", pct_deaths), ")"
+      "**", region, "**",
+      "<br/>*N = ", format(deaths, big.mark = ","),
+      "*<br/>(", sprintf("%.1f%%", pct_deaths), ")"
     )
   ) %>%
   ungroup()
 
 ggplot(df,
        aes(ymin = ymin, ymax = ymax,
-           xmin = 3, xmax = 4, fill = region)) +
+           xmin = 3, xmax = 4, fill = region,
+           y = label_pos, label = label)) +
   geom_rect(show.legend = FALSE) +
-  geom_text(x = 3.5, aes(y = label_pos, label = label), size = 4) +
+  geom_richtext(
+    fill = NA, label.color = NA,
+    x = 3.5, size = 5) +
   scale_fill_brewer(type = "qual", palette = "Pastel1") +
   coord_polar(theta = "y") +
   xlim(2, 4) +
   theme_void(16) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.caption = element_text(family = "Inconsolata"),
+    plot.margin = unit(rep(1, 4), "cm")
+  ) +
   labs(
     title = "Fallecimientos por cólera en Londres por región (1849)",
     subtitle = "Fuente: Datos de William Farr en el paquete \"HistData\"",
