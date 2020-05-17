@@ -8,7 +8,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 3 | 14 de mayo | puntos / burbujas
 |  [:heavy_check_mark:]  | 4 | 15 de mayo | gráficos con facetas
 |  [:heavy_check_mark:]  | 5 | 16 de mayo | diagramas de arco
-|  [ ]  | 6 | 17 de mayo | gráficos de donut :doughnut:
+|  [:heavy_check_mark:]  | 6 | 17 de mayo | gráficos de donut :doughnut:
 |  [ ]  | 7 | 18 de mayo | gráficos ridgeline
 |  [ ]  | 8 | 19 de mayo | gráficos de contorno
 |  [ ]  | 9 | 20 de mayo | gráficos de áreas apiladas
