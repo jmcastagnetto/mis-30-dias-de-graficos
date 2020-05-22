@@ -12,8 +12,8 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 7 | 18 de mayo | gráficos ridgeline
 |  [:heavy_check_mark:]  | 8 | 19 de mayo | gráficos de contorno
 |  [:heavy_check_mark:]  | 9 | 20 de mayo | gráficos de áreas apiladas
-|  [ ]  | 10 | 21 de mayo | ¡explorar paletas de colores!
-|  [ ]  | 11 | 22 de mayo | mapas de calor (_heatmap_)
+|  [:heavy_check_mark:]  | 10 | 21 de mayo | ¡explorar paletas de colores!
+|  [:heavy_check_mark:]  | 11 | 22 de mayo | mapas de calor (_heatmap_)
 |  [ ]  | 12 | 23 de mayo | gráficos de paleta (_lollipop_) :lollipop:
 |  [ ]  | 13 | 24 de mayo | visualizar datos temporales
 |  [ ]  | 14 | 25 de mayo | gráficos de rectángulos/árbol (_treemap_)
@@ -41,3 +41,4 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 - [Learning Improvement Information Center: Regional Indicators for Learning](https://mydata.iadb.org/Education/Learning-Improvement-Information-Center-Regional-I/sqwh-9zsr)
 - [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
 - [Dune (franchise) en Wikipedia](https://en.wikipedia.org/wiki/Dune_(franchise))
+- [Beach Volleyball #TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-05-19/readme.md)
