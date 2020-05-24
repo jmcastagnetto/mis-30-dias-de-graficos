@@ -10,22 +10,30 @@ fallecimientos <- read_csv(csv_url)
 
 por_departamento <- fallecimientos %>%
   mutate(
-    departamento = fct_infreq(departamento, ordered = TRUE)
+    departamento = fct_infreq(departamento,
+                              ordered = TRUE)
   ) %>%
   group_by(departamento) %>%
   tally()
 
 ggplot(
   por_departamento,
-  aes(x = n, y = departamento,
-      color = departamento)
+  aes(color = departamento)
 ) +
-  geom_segment(aes(xend = 0, yend = departamento),
+  geom_segment(
+    aes(x = 0, xend = n,
+        y = departamento, yend = departamento),
                size = 2,
                show.legend = FALSE) +
-  geom_point(size = 4, show.legend = FALSE) +
+  geom_point(
+    aes(x = n, y = departamento),
+    size = 4, show.legend = FALSE) +
+  geom_text(
+    aes(x = n, y = departamento, label = n),
+    color = "black", hjust = 0, nudge_x = 10,
+    show.legend = FALSE) +
   scale_color_viridis_d() +
-  scale_y_discrete(limits = rev(por_departamento$departamento)) +
+  #scale_y_discrete(limits = rev(por_departamento$departamento)) +
   labs(
     x = "",
     y = "",
@@ -37,6 +45,9 @@ ggplot(
   ) +
   ggthemes::theme_tufte(20) +
   theme(
+    axis.line.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.text.x = element_blank(),
     plot.caption = element_text(family = "Inconsolata"),
     plot.margin = unit(rep(1, 4), "cm")
   )
