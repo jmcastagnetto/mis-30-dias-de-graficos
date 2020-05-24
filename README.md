@@ -14,7 +14,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 9 | 20 de mayo | gráficos de áreas apiladas
 |  [:heavy_check_mark:]  | 10 | 21 de mayo | ¡explorar paletas de colores!
 |  [:heavy_check_mark:]  | 11 | 22 de mayo | mapas de calor (_heatmap_)
-|  [ ]  | 12 | 23 de mayo | gráficos de paleta (_lollipop_) :lollipop:
+|  [:heavy_check_mark:]  | 12 | 23 de mayo | gráficos de paleta (_lollipop_) :lollipop:
 |  [ ]  | 13 | 24 de mayo | visualizar datos temporales
 |  [ ]  | 14 | 25 de mayo | gráficos de rectángulos/árbol (_treemap_)
 |  [ ]  | 15 | 26 de mayo | dendogramas
