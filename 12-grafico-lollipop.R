@@ -9,6 +9,9 @@ repo_url <- "https://bit.ly/2ZxSnaC"
 fallecimientos <- read_csv(csv_url)
 
 por_departamento <- fallecimientos %>%
+  mutate(
+    departamento = fct_infreq(departamento, ordered = TRUE)
+  ) %>%
   group_by(departamento) %>%
   tally()
 
