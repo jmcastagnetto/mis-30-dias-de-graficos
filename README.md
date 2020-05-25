@@ -16,7 +16,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 11 | 22 de mayo | mapas de calor (_heatmap_)
 |  [:heavy_check_mark:]  | 12 | 23 de mayo | gráficos de paleta (_lollipop_) :lollipop:
 |  [:heavy_check_mark:]  | 13 | 24 de mayo | visualizar datos temporales
-|  [ ]  | 14 | 25 de mayo | gráficos de rectángulos/árbol (_treemap_)
+|  [:heavy_check_mark:]  | 14 | 25 de mayo | gráficos de rectángulos/árbol (_treemap_)
 |  [ ]  | 15 | 26 de mayo | dendogramas
 |  [ ]  | 16 | 27 de mayo | gráficos de waffle :waffle:
 |  [ ]  | 17 | 28 de mayo | diagramas de sankey
