@@ -19,7 +19,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 14 | 25 de mayo | gráficos de rectángulos/árbol (_treemap_)
 |  [:heavy_check_mark:]  | 15 | 26 de mayo | dendogramas
 |  [:heavy_check_mark:]  | 16 | 27 de mayo | gráficos de waffle :waffle:
-|  [ ]  | 17 | 28 de mayo | diagramas de sankey
+|  [:heavy_check_mark:]  | 17 | 28 de mayo | diagramas de sankey
 |  [ ]  | 18 | 29 de mayo | visualizar datos espaciales :world_map:
 |  [ ]  | 19 | 30 de mayo | gráficos de flujo (_stream graph_)
 |  [ ]  | 20 | 31 de mayo | redes
@@ -42,3 +42,4 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 - [World Bank Country and Lending Groups](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
 - [Dune (franchise) en Wikipedia](https://en.wikipedia.org/wiki/Dune_(franchise))
 - [Beach Volleyball #TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-05-19/readme.md)
+- [UN World Population Prospects: Comprehensive list of locations with codes (numerical and ISO3), description, major area, region and development group](https://population.un.org/wpp/Download/Metadata/Documentation/)
