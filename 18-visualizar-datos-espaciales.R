@@ -5,7 +5,6 @@
 library(tidyverse)
 library(rnaturalearth)
 library(rnaturalearthdata)
-library(tmap)
 
 who_ct_raw <- read_csv(
   "datos/COVID19-web.csv",
