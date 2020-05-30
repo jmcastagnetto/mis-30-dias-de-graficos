@@ -1,0 +1,101 @@
+---
+title: "Perú: Fallecimientos diarios por COVID-19"
+subtitle: "Fuente: Datos abiertos del MINSA (descargado: 2020-05-29 13:43 PET)"
+author: "@jmcastagnetto, Jesús M. Castagnetto"
+date: "2020-05-30 // #30diasdegraficos"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(streamgraph)
+
+ts_url <- "https://github.com/jmcastagnetto/covid-19-peru-limpiar-datos-minsa/raw/master/datos/timeseries-fallecimientos-lugares.csv"
+
+ts_raw <- read_csv(ts_url)
+
+ts_lima <- ts_raw %>%
+  filter(departamento == "LIMA" & 
+           provincia != "CALLAO" & # limpiar registros errados
+           provincia != "TRUJILLO") %>% 
+  mutate(
+    provincia = str_replace_na(provincia, "Desconocida") %>% 
+      str_to_title()
+  ) %>% 
+  group_by(fecha_fallecimiento, departamento, provincia) %>% 
+  summarise(
+    n_prov = sum(n)
+  )
+
+
+ts_peru <- ts_raw %>% 
+  arrange(fecha_fallecimiento) %>% 
+  group_by(fecha_fallecimiento,departamento) %>% 
+  summarise(
+    n_dep = sum(n)
+  ) 
+
+# copiado/modificado de:
+# https://github.com/hrbrmstr/streamgraph/blob/master/R/marker.r
+sg_add_marker <-
+  function(sg,
+           x,
+           label = "",
+           stroke_width = 0.5,
+           stroke = "#7f7f7f",
+           space = 5,
+           y = 0,
+           color = "#7f7f7f",
+           size = 12,
+           anchor = "start") {
+    if (inherits(x, "Date")) {
+      x <- format(x, "%Y-%m-%d")
+    }
+
+    mark <-
+      data.frame(
+        x = x,
+        y = y,
+        label = label,
+        color = color,
+        stroke_width = stroke_width,
+        stroke = stroke,
+        space = space,
+        size = size,
+        anchor = anchor,
+        stringsAsFactors = FALSE
+      )
+
+    sg$x$markers <- mark
+
+    sg
+  }
+
+```
+
+```{r echo=FALSE}
+sg <- ts_peru %>%
+  streamgraph(
+    key = "departamento",
+    value = "n_dep",
+    date = "fecha_fallecimiento",
+    interactive = TRUE,
+    offset = "wiggle",
+    interpolate = "cardinal"
+  ) %>% 
+  sg_fill_tableau() %>% 
+  sg_axis_x(tick_interval = 1,
+            tick_units = "week", tick_format = "%Y-%m-%d") %>%
+  sg_add_marker(x = "2020-05-26", label = "🤨", 
+                size = 42, stroke_width = 2) %>% 
+  sg_annotate(label = "1. LIMA", x = "2020-04-12", y = 75, size = 20) %>% 
+  sg_annotate(label = "2. LAMBAYEQUE", x = "2020-04-19", y = 52, size = 16) %>%
+  sg_annotate(label = "3. PIURA", x = "2020-04-26", y = 110, size = 12) %>% 
+#  sg_legend(show = TRUE, label = "Departamentos: ") %>% 
+  sg_title(title = "Fallecimientos por COVID-19 por Departamento (Perú)")
+sg
+```
+
+- Los tres Departamentos con mayor número de fallecimientos son: Lima, Lambayeque y Piura.
+- Los datos del 2020-05-27, **son inusuales**, pero hasta hoy (2020-05-30, 08:00h PET), no han habido actualizaciones al respecto en https://www.datosabiertos.gob.pe/dataset/fallecidos-por-covid-19-ministerio-de-salud-minsa
