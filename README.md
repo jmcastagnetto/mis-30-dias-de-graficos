@@ -21,7 +21,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 16 | 27 de mayo | gráficos de waffle :waffle:
 |  [:heavy_check_mark:]  | 17 | 28 de mayo | diagramas de sankey
 |  [:heavy_check_mark:]  | 18 | 29 de mayo | visualizar datos espaciales :world_map:
-|  [ ]  | 19 | 30 de mayo | gráficos de flujo (_stream graph_)
+|  [:heavy_check_mark:]  | 19 | 30 de mayo | gráficos de flujo (_stream graph_)
 |  [ ]  | 20 | 31 de mayo | redes
 |  [ ]  | 21 | 1 de junio | gráficos con anotaciones
 |  [ ]  | 22 | 2 de junio | visualizar datos textuales

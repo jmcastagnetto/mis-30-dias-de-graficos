@@ -38,6 +38,7 @@ ts_peru <- ts_raw %>%
 
 # copiado/modificado de:
 # https://github.com/hrbrmstr/streamgraph/blob/master/R/marker.r
+# por algún motivo no es exportado en la versión actual
 sg_add_marker <-
   function(sg,
            x,
