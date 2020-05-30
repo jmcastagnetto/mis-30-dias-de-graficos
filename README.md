@@ -22,7 +22,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 17 | 28 de mayo | diagramas de sankey
 |  [:heavy_check_mark:]  | 18 | 29 de mayo | visualizar datos espaciales :world_map:
 |  [:heavy_check_mark:]  | 19 | 30 de mayo | gráficos de flujo (_stream graph_)
-|  [ ]  | 20 | 31 de mayo | redes
+|  [:heavy_check_mark:]  | 20 | 31 de mayo | redes
 |  [ ]  | 21 | 1 de junio | gráficos con anotaciones
 |  [ ]  | 22 | 2 de junio | visualizar datos textuales
 |  [ ]  | 23 | 3 de junio | gráficos de proyección solar (_sunburst_)
@@ -43,3 +43,4 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 - [Dune (franchise) en Wikipedia](https://en.wikipedia.org/wiki/Dune_(franchise))
 - [Beach Volleyball #TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-05-19/readme.md)
 - [UN World Population Prospects: Comprehensive list of locations with codes (numerical and ISO3), description, major area, region and development group](https://population.un.org/wpp/Download/Metadata/Documentation/)
+- ["Los peruanos del Lava Jato", El Comercio, 2019](https://especiales.elcomercio.pe/?q=especiales/los-peruanos-del-lavajato/index.html)
