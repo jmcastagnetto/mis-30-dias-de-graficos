@@ -44,6 +44,14 @@ inv_casos <- pe_lavajato %>%
     flag = TRUE
   )
 
+investigados <- pe_lavajato %>%
+  select(investigados) %>%
+  arrange(investigados) %>%
+  distinct() %>%
+  mutate(
+    nombre = investigados
+  )
+
 investigados_pares <- pe_lavajato %>%
   select(investigados) %>%
   mutate(copia = investigados) %>%
@@ -78,13 +86,12 @@ g_investigados <- tbl_graph(
     Conexiones = centrality_degree(mode = "in")
   )
 
-
 red_investigados <- ggraph(g_investigados, layout = "kk") +
   geom_edge_fan(aes(color = caso), width = .1, show.legend = FALSE) +
   geom_node_text(aes(label = str_wrap(nombre, 10), color = Conexiones),
                  size = 4, repel = FALSE) +
   labs(
-    title = "Investigados por el caso \"Lavajato\" en Perú",
+    title = "Investigados por el caso \"Lava Jato\" en Perú",
     subtitle = "Fuente: El Comercio, 2019 (https://especiales.elcomercio.pe/?q=especiales/los-peruanos-del-lavajato/index.html)",
     caption = "2020-05-31 // #30diasdegráficos // @jmcastagnetto, Jesus M. Castagnetto"
   ) +
@@ -98,7 +105,7 @@ red_investigados <- ggraph(g_investigados, layout = "kk") +
     plot.subtitle = element_text(size= 34)
   )
 
-red_investigados
+#red_investigados
 
 ggsave(
   plot = red_investigados,
