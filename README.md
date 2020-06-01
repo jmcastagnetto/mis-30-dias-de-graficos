@@ -25,7 +25,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 20 | 31 de mayo | redes
 |  [:heavy_check_mark:]  | 21 | 1 de junio | gráficos con anotaciones
 |  [:heavy_check_mark:]  | 22 | 2 de junio | visualizar datos textuales
-|  [ ]  | 23 | 3 de junio | gráficos de proyección solar (_sunburst_)
+|  [:heavy_check_mark:]  | 23 | 3 de junio | gráficos de proyección solar (_sunburst_)
 |  [ ]  | 24 | 4 de junio | coropletas
 |  [ ]  | 25 | 5 de junio | gráficos de violín :violin:
 |  [ ]  | 26 | 6 de junio | diagramas de marimekko

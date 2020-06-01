@@ -1,0 +1,58 @@
+---
+title: "Licenciamiento institucional en el Perú"
+subtitle: "Fuente: SUNEDU - Estado Licenciamiento Universidades"
+author: "@jmcastagnetto, Jesús M. Castagnetto"
+date: "2020-06-03 // #30diasdegraficos"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE
+)
+library(tidyverse)
+library(sunburstR)
+
+sunedu_raw <- read_delim(
+  file = "datos/sunedu_licenciamiento_universidades-utf8.txt",
+  delim = "|"
+) %>%
+  filter(!is.na(CODIGO_ENTIDAD)) %>%
+  janitor::clean_names() %>%
+  mutate_at(
+    vars(tipo_gestion, estado_licenciamiento,
+         departamento_local, provincia_local, distrito_local),
+    factor
+  ) %>%
+  mutate(
+    periodo_licenciamiento = as.integer(periodo_licenciamiento),
+    pais = "PERU"
+  )
+
+sunedu_df <- sunedu_raw %>%
+  group_by(pais, departamento_local,
+           provincia_local,
+           #distrito_local,
+           estado_licenciamiento, tipo_gestion) %>%
+  tally() %>%
+  ungroup() %>%
+  unite(
+    "node",
+    pais:tipo_gestion,
+    sep = "-"
+  )
+
+sunedu_sb <- sund2b(sunedu_df, valueField = "n",
+       rootLabel = "Licenciacimiento Institucional (SUNEDU)",
+       width = 800, height = 600)
+
+```
+
+```{r}
+sunedu_sb
+```
+
+- **URL de la fuente**: https://www.datosabiertos.gob.pe/dataset/sunedu-estado-licenciamiento-universidades"
+- **Datos descargados el 2020-05-30**
