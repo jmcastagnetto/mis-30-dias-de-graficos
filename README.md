@@ -23,8 +23,8 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 18 | 29 de mayo | visualizar datos espaciales :world_map:
 |  [:heavy_check_mark:]  | 19 | 30 de mayo | gráficos de flujo (_stream graph_)
 |  [:heavy_check_mark:]  | 20 | 31 de mayo | redes
-|  [ ]  | 21 | 1 de junio | gráficos con anotaciones
-|  [ ]  | 22 | 2 de junio | visualizar datos textuales
+|  [:heavy_check_mark:]  | 21 | 1 de junio | gráficos con anotaciones
+|  [:heavy_check_mark:]  | 22 | 2 de junio | visualizar datos textuales
 |  [ ]  | 23 | 3 de junio | gráficos de proyección solar (_sunburst_)
 |  [ ]  | 24 | 4 de junio | coropletas
 |  [ ]  | 25 | 5 de junio | gráficos de violín :violin:
@@ -44,3 +44,4 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 - [Beach Volleyball #TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-05-19/readme.md)
 - [UN World Population Prospects: Comprehensive list of locations with codes (numerical and ISO3), description, major area, region and development group](https://population.un.org/wpp/Download/Metadata/Documentation/)
 - ["Los peruanos del Lava Jato", El Comercio, 2019](https://especiales.elcomercio.pe/?q=especiales/los-peruanos-del-lavajato/index.html)
+- [SUNEDU - Estado Licenciamiento Universidades](https://www.datosabiertos.gob.pe/dataset/sunedu-estado-licenciamiento-universidades): Actualización del 2020-04-17, descargado el 2020-05-30
