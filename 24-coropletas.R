@@ -12,10 +12,6 @@ sunedu_raw <- read_delim(
     vars(tipo_gestion, estado_licenciamiento,
          departamento_local, provincia_local, distrito_local),
     factor
-  ) %>%
-  mutate(
-    periodo_licenciamiento = as.integer(periodo_licenciamiento),
-    pais = "PERU"
   )
 
 sunedu_df <- sunedu_raw %>%
@@ -42,7 +38,7 @@ pe_map <- tm_shape(pe_shp) +
   tm_borders() +
   tm_compass(position = c(.05, .3)) +
   tm_credits(
-    text = "#30diasdegraficos\n@jmcastagnetto, Jesus M. Castagnetto",
+    text = "#30diasdegraficos\n2020-06-04\n@jmcastagnetto, Jesus M. Castagnetto",
     size = 0.9,
     fontfamily = "Inconsolata",
     position = c("left", "bottom")
