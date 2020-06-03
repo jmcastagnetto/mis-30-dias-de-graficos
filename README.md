@@ -27,7 +27,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 22 | 2 de junio | visualizar datos textuales
 |  [:heavy_check_mark:]  | 23 | 3 de junio | gráficos de proyección solar (_sunburst_)
 |  [:heavy_check_mark:]  | 24 | 4 de junio | coropletas
-|  [ ]  | 25 | 5 de junio | gráficos de violín :violin:
+|  [:heavy_check_mark:]  | 25 | 5 de junio | gráficos de violín :violin:
 |  [ ]  | 26 | 6 de junio | diagramas de marimekko
 |  [ ]  | 27 | 7 de junio | ¡gráficos animados!
 |  [ ]  | 28 | 8 de junio | diagramas de cuerdas
@@ -45,3 +45,4 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 - [UN World Population Prospects: Comprehensive list of locations with codes (numerical and ISO3), description, major area, region and development group](https://population.un.org/wpp/Download/Metadata/Documentation/)
 - ["Los peruanos del Lava Jato", El Comercio, 2019](https://especiales.elcomercio.pe/?q=especiales/los-peruanos-del-lavajato/index.html)
 - [SUNEDU - Estado Licenciamiento Universidades](https://www.datosabiertos.gob.pe/dataset/sunedu-estado-licenciamiento-universidades): Actualización del 2020-04-17, descargado el 2020-05-30
+- ["Contrataciones ante la Emergencia Sanitaria por la existencia del Coronavirus - [Organismo Supervisor de las Contrataciones del Estado (OSCE)]"](https://www.datosabiertos.gob.pe/dataset/contrataciones-ante-la-emergencia-sanitaria-por-la-existencia-del-coronavirus-organismo)
