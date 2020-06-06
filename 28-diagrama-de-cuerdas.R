@@ -87,9 +87,11 @@ text(x = -.8, y = .8,
      cex = 6, font = 2, pos = 3)
 
 text(x = -.8, y = -.8,
-     labels = "#30diasdegráficos // @jmcastagnetto, Jesus M. Castagnetto",
+     labels = "2020-06-08 // #30diasdegráficos // @jmcastagnetto, Jesus M. Castagnetto",
      cex = 2, font = 1, pos = 3)
 
 dev.off()
 
 circos.clear()
+
+# TO DO: anotar los tipos de nodos: Serie, Década, Autor, Género literario
