@@ -2,10 +2,6 @@ library(tidyverse)
 library(circlize)
 
 dune_libros <- read_csv("datos/dune-libros.csv") %>%
-  # unite(
-  #   col = "book", sep = ", ",
-  #   title, pub_year
-  # ) %>%
   mutate(
     series = replace_na(series, "Sin serie") %>%
       str_wrap(12),
@@ -17,38 +13,26 @@ dune_edges <- bind_rows(
   dune_libros %>%
     select(author, genre) %>%
     rename(from = 1, to = 2),
-    # %>%
-    # mutate(type = "author:genre"),
   dune_libros %>%
     select(author, series) %>%
     rename(from = 1, to = 2),
-    # %>%
-    # mutate(type = "author:series"),
   dune_libros %>%
     select(author, decada) %>%
     rename(from = 1, to = 2),
-    # %>%
-    # mutate(type = "author:decada"),
   dune_libros %>%
     select(genre, series) %>%
     rename(from = 1, to = 2),
-    # %>%
-    # mutate(type = "genre:series"),
   dune_libros %>%
     select(genre, decada) %>%
     rename(from = 1, to = 2),
-    # %>%
-    # mutate(type = "genre:decada"),
   dune_libros %>%
     select(series, decada) %>%
     rename(from = 1, to = 2)
-    # %>%
-    # mutate(type = "series:decada")
 )
 
 png(
   filename = "28-diagrama-de-cuerdas-dune-libros.png",
-  width = 2500, height = 1800,
+  width = 2000, height = 2000,
   type = "cairo-png", antialias = "subpixel"
 )
 plot.new()
@@ -76,9 +60,9 @@ circos.trackPlotRegion(
   },
   bg.border = NA
 )
-text(x = -.8, y = .8,
-     labels = "La saga de\"Dune\"",
-     cex = 6, font = 2, pos = 3)
+
+title(main = "La saga de \"Dune\"", 
+	  cex.main = 6, line = -6, outer = FALSE)
 
 text(x = 0, y = -.9,
      labels = "2020-06-08 // #30diasdegráficos // @jmcastagnetto, Jesus M. Castagnetto",
@@ -92,4 +76,3 @@ dev.off()
 
 circos.clear()
 
-# TO DO: anotar los tipos de nodos: Serie, Década, Autor, Género literario
