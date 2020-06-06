@@ -46,16 +46,10 @@ dune_edges <- bind_rows(
     # mutate(type = "series:decada")
 )
 
-# %>%
-#   mutate(
-#     value = as.numeric(as.factor(type))
-#   ) %>%
-  # select(-type)
-
 png(
   filename = "28-diagrama-de-cuerdas-dune-libros.png",
   width = 2500, height = 1800,
-  type = "cairo", antialias = "subpixel"
+  type = "cairo-png", antialias = "subpixel"
 )
 plot.new()
 
@@ -86,9 +80,13 @@ text(x = -.8, y = .8,
      labels = "La saga de\"Dune\"",
      cex = 6, font = 2, pos = 3)
 
-text(x = -.8, y = -.8,
+text(x = 0, y = -.9,
      labels = "2020-06-08 // #30diasdegráficos // @jmcastagnetto, Jesus M. Castagnetto",
-     cex = 2, font = 1, pos = 3)
+     cex = 3, font = 1)
+
+text(x = 0, y = -1,
+     labels = "Código: https://github.com/jmcastagnetto/mis-30-dias-de-graficos",
+     cex = 3, font = 1)
 
 dev.off()
 
