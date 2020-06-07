@@ -2,6 +2,8 @@ library(tidyverse)
 library(readxl)
 library(countrycode)
 library(GGally)
+library(RColorBrewer)
+
 
 # Indicadores de educación del BID
 iadb_learning_indicators <- read_csv("datos/Learning_Improvement_Information_Center___Regional_Indicators_for_Learning.csv.gz")
@@ -23,7 +25,10 @@ iadb_selected <- iadb_learning_indicators %>%
     names_from = Materia,
     values_from = Valor
   ) %>%
-  filter(Ano == 2018)
+  filter(Ano == 2018) %>%
+  rename(
+    "Matemáticas" = Matematicas
+  )
 
 lbls <- iadb_selected %>%
   select(Matematicas, nombre_pais) %>%
@@ -34,7 +39,15 @@ lbls <- iadb_selected %>%
     Matematicas = if_else(nombre_pais == "Costa Rica",
                           Matematicas + 1.5, # para evitar cruce con Perú
                           Matematicas),
-  )
+  ) %>%
+  arrange(Matematicas)
+
+colores <- wesanderson::wes_palette("FantasticFox1",
+                                    10, "continuous")
+cmap <- c()
+for (k in 1:length(lbls$nombre_pais)) {
+  cmap[lbls$nombre_pais[k]] = colores[k]
+}
 
 
 p <- ggparcoord(
@@ -43,10 +56,8 @@ p <- ggparcoord(
   groupColumn = 2,
   showPoints = TRUE,
   scale = "globalminmax"
-)
-
-p +
-  geom_vline(xintercept = 1:3, color = "grey60",
+) +
+  geom_vline(xintercept = 1:3, color = "grey20",
              linetype = "dashed") +
   labs(
     y = "",
@@ -55,21 +66,36 @@ p +
     subtitle = "Fuente: IADB Data (https://bit.ly/2LsB2Yb)",
     caption = "2020-06-09 // #30diasdegráficos // @jmcastagnetto, Jesus M. Castagnetto"
   ) +
-  scale_color_viridis_d(name = "") +
   annotate(
     "text",
     y = lbls$Matematicas,
     label = lbls$nombre_pais,
-    color = lbls$nombre_pais,
+    color = cmap,
     x = rep(3.05, nrow(lbls)),
     hjust = 0,
     size = 5
   ) +
-  ggthemes::theme_pander(20) +
+  scale_color_manual(name = "", values = cmap) +
+  theme_light(22) +
   theme(
     legend.position = "none",
+    panel.grid = element_line(colour = "grey80",
+                              linetype = "dashed"),
     axis.title = element_text(hjust = 1),
     plot.margin = unit(rep(1, 4), "cm"),
     plot.caption = element_text(family = "Inconsolata", size = 14)
   )
 
+ggsave(
+  plot = p,
+  filename = "29-coordenadas-paralelas-pisa2018-promedios-latamcaribe.png",
+  height = 9,
+  width = 14
+)
+
+img <- magick::image_read("29-coordenadas-paralelas-pisa2018-promedios-latamcaribe.png")
+img_resized <- magick::image_scale(img, "25%")
+magick::image_write(
+  img_resized,
+  "29-coordenadas-paralelas-pisa2018-promedios-latamcaribe-resized25.png"
+)
