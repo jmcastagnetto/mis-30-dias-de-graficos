@@ -32,7 +32,7 @@ Mis contribuciones a los "30 días de gráficos" del 2020 (https://github.com/ci
 |  [:heavy_check_mark:]  | 27 | 7 de junio | ¡gráficos animados!
 |  [:heavy_check_mark:]  | 28 | 8 de junio | diagramas de cuerdas
 |  [:heavy_check_mark:]  | 29 | 9 de junio | gráficos de coordenadas paralelas
-|  [ ]  | 30 | 10 de junio | diagramas de área polar o de :star:Florence Nightingale:star:
+|  [:heavy_check_mark:]  | 30 | 10 de junio | diagramas de área polar o de :star:Florence Nightingale:star:
 
 **Fuentes de datos**
 
